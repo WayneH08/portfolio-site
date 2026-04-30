@@ -15,9 +15,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark")
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as Theme | null
+    const savedTheme = window.localStorage.getItem("theme")
 
-    if (savedTheme) {
+    if (savedTheme === "dark" || savedTheme === "light") {
       setTheme(savedTheme)
       return
     }
@@ -26,10 +26,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme(prefersLight ? "light" : "dark")
   }, [])
 
+  useEffect(() => {
+    window.localStorage.setItem("theme", theme)
+    document.documentElement.dataset.theme = theme
+  }, [theme])
+
   function toggleTheme() {
     setTheme((current) => {
       const nextTheme = current === "dark" ? "light" : "dark"
-      localStorage.setItem("theme", nextTheme)
+      window.localStorage.setItem("theme", nextTheme)
+      document.documentElement.dataset.theme = nextTheme
       return nextTheme
     })
   }

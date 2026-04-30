@@ -15,7 +15,7 @@ export function FunModeProvider({ children }: { children: React.ReactNode }) {
   const { theme } = useTheme()
 
   useEffect(() => {
-    const savedFunMode = localStorage.getItem("funMode")
+    const savedFunMode = window.localStorage.getItem("funMode")
 
     if (savedFunMode === "true") {
       setFunMode(true)
@@ -23,36 +23,39 @@ export function FunModeProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   useEffect(() => {
+    window.localStorage.setItem("funMode", String(funMode))
+    document.documentElement.dataset.funMode = String(funMode)
+
     const pageBg = funMode
-      ? "#2563eb"
+      ? "linear-gradient(135deg, #ef4444, #facc15, #3b82f6, #22c55e)"
       : theme === "dark"
         ? "#0b2418"
         : "#f7faf7"
 
+    const pageText = funMode
+      ? "#ffffff"
+      : theme === "dark"
+        ? "#ffffff"
+        : "#102018"
+
     document.documentElement.style.setProperty("--page-bg", pageBg)
+    document.documentElement.style.setProperty("--page-text", pageText)
     document.documentElement.style.background = pageBg
     document.body.style.background = pageBg
+    document.body.style.color = pageText
   }, [funMode, theme])
 
   function toggleFunMode() {
-    setFunMode((prev) => {
-      const newValue = !prev
-      localStorage.setItem("funMode", String(newValue))
-      return newValue
-    })
+    setFunMode((prev) => !prev)
   }
 
   return (
     <FunModeContext.Provider value={{ funMode, toggleFunMode }}>
       <div
-        className={`min-h-screen transition-all duration-700 ease-in-out ${
-          funMode
-            ? "fun-mode-gradient"
-            : theme === "dark"
-              ? "bg-[#0b2418] text-white"
-              : "bg-[#f7faf7] text-[#102018]"
-        }`}
+        className="min-h-screen transition-all duration-700 ease-in-out"
         style={{
+          background: "var(--page-bg)",
+          color: "var(--page-text)",
           fontFamily: funMode
             ? '"Comic Sans MS", Papyrus, fantasy, cursive, sans-serif'
             : "inherit",
