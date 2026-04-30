@@ -1,4 +1,12 @@
+"use client"
+
+import { useFunMode } from "@/components/FunModeProvider"
+import { useTheme } from "@/components/ThemeProvider"
+
 export default function VideosPage() {
+  const { funMode } = useFunMode()
+  const { theme } = useTheme()
+
   const videoProjects = [
     {
       title: "Animation Project Placeholder",
@@ -21,9 +29,25 @@ export default function VideosPage() {
   ]
 
   return (
-    <main className="px-6 py-16">
+    <main
+      className={`min-h-screen px-6 py-16 transition-all duration-1000 ease-[cubic-bezier(.22,1,.36,1)] ${
+        funMode
+          ? "fun-mode-gradient text-white"
+          : theme === "dark"
+            ? "bg-[#0f2419] text-emerald-50"
+            : "bg-[#f4fbf6] text-[#102018]"
+      }`}
+    >
       <section className="mx-auto max-w-5xl">
-        <p className="mb-3 text-sm uppercase tracking-[0.3em] text-pink-300">
+        <p
+          className={`mb-3 text-sm uppercase tracking-[0.3em] ${
+            funMode
+              ? "text-white"
+              : theme === "dark"
+                ? "text-emerald-400"
+                : "text-emerald-700"
+          }`}
+        >
           Creative Work
         </p>
 
@@ -31,7 +55,15 @@ export default function VideosPage() {
           Video & Animation
         </h1>
 
-        <p className="mb-12 max-w-2xl text-lg text-slate-300">
+        <p
+          className={`mb-12 max-w-2xl text-lg ${
+            funMode
+              ? "text-white"
+              : theme === "dark"
+                ? "text-emerald-100"
+                : "text-[#355343]"
+          }`}
+        >
           This page will eventually showcase video projects, animation tests,
           3D work, motion graphics, and other creative experiments.
         </p>
@@ -40,19 +72,49 @@ export default function VideosPage() {
           {videoProjects.map((project) => (
             <div
               key={project.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl transition hover:-translate-y-1 hover:bg-white/10"
+              className={`rounded-2xl border p-6 shadow-xl transition-colors duration-500 ${
+                funMode
+                  ? "border-white/30 bg-black/25 backdrop-blur hover:bg-black/35"
+                  : theme === "dark"
+                    ? "border-emerald-900/40 bg-[#173328] hover:bg-[#1d3f31]"
+                    : "border-emerald-200 bg-white hover:bg-emerald-50"
+              }`}
             >
-              <div className="mb-4 flex h-40 items-center justify-center rounded-xl bg-black/30 text-5xl">
+              <div
+                className={`mb-4 flex h-40 items-center justify-center rounded-xl text-5xl ${
+                  funMode
+                    ? "bg-black/25"
+                    : theme === "dark"
+                      ? "bg-[#0b1f15]"
+                      : "bg-emerald-100"
+                }`}
+              >
                 🎬
               </div>
 
-              <span className="mb-3 inline-block rounded-full bg-pink-500/20 px-3 py-1 text-sm text-pink-200">
+              <span
+                className={`mb-3 inline-block rounded-full px-3 py-1 text-sm ${
+                  funMode
+                    ? "bg-white/20 text-white"
+                    : theme === "dark"
+                      ? "bg-emerald-400/15 text-emerald-200"
+                      : "bg-emerald-100 text-emerald-800"
+                }`}
+              >
                 {project.tag}
               </span>
 
               <h2 className="mb-3 text-xl font-semibold">{project.title}</h2>
 
-              <p className="text-sm leading-6 text-slate-300">
+              <p
+                className={`text-sm leading-6 ${
+                  funMode
+                    ? "text-white"
+                    : theme === "dark"
+                      ? "text-emerald-100"
+                      : "text-[#355343]"
+                }`}
+              >
                 {project.description}
               </p>
             </div>

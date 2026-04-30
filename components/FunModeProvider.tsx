@@ -31,21 +31,12 @@ export function FunModeProvider({ children }: { children: React.ReactNode }) {
   return (
     <FunModeContext.Provider value={{ funMode, toggleFunMode }}>
       <div
-        className={
-          funMode
-            ? "min-h-screen bg-gradient-to-br from-red-500 via-yellow-300 via-blue-500 to-green-500 text-white transition-all duration-500"
-            : "min-h-screen bg-slate-950 text-white transition-all duration-500"
-        }
-        style={
-          funMode
-            ? {
-                fontFamily:
-                  '"Comic Sans MS", Papyrus, fantasy, cursive, sans-serif',
-              }
-            : {
-                fontFamily: "inherit",
-              }
-        }
+        className="min-h-screen transition-all duration-700 ease-in-out"
+        style={{
+          fontFamily: funMode
+            ? '"Comic Sans MS", Papyrus, fantasy, cursive, sans-serif'
+            : "inherit",
+        }}
       >
         {funMode && (
           <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden opacity-25">

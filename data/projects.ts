@@ -7,11 +7,17 @@ export const projects = [
     href: 'https://github.com/WayneH08/Tweeter',
   },
   {
-    title: 'Magnify Rush CRM',
+    title: 'Magnify Rush (AI CRM Platform)',
     description:
-      'A CRM platform for managing client data, workflows, communication, scheduling, and AI-powered summaries.',
-    tech: ['Next.js', 'Backend Systems', 'AI', 'Database Design'],
-    href: '#contact',
+      'Full-stack AI-powered CRM system for managing client data, workflows, and insights. Built in collaboration with Magnify Dental Marketing for real-world use.',
+    tech: ['TypeScript', 'React', 'Full Stack', 'AI'],
+    href: '/projects/magnify-rush',
+    assets: {
+      demo: '/assets/magnify-rush/Magnify%20Rush%20Final%20Demo.mp4',
+      poster: '/assets/magnify-rush/design-poster.pdf',
+      flyer: '/assets/magnify-rush/handout-flyer.pdf',
+      slides: '/assets/magnify-rush/slides.pdf',
+    },
   },
   {
     title: 'NoTreble',
