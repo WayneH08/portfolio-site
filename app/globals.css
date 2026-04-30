@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
+:root {
+  --page-bg: #0b2418;
+}
+
 html {
   scroll-behavior: smooth;
+  background: var(--page-bg);
+  min-height: 100%;
 }
 
 body {
   margin: 0;
+  background: var(--page-bg);
+  min-height: 100%;
 }
 
 /* Readable animated Fun Mode background */

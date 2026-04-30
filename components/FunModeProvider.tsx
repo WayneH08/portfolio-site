@@ -1,6 +1,7 @@
 "use client"
 
 import { createContext, useContext, useEffect, useState } from "react"
+import { useTheme } from "@/components/ThemeProvider"
 
 type FunModeContextType = {
   funMode: boolean
@@ -11,6 +12,7 @@ const FunModeContext = createContext<FunModeContextType | undefined>(undefined)
 
 export function FunModeProvider({ children }: { children: React.ReactNode }) {
   const [funMode, setFunMode] = useState(false)
+  const { theme } = useTheme()
 
   useEffect(() => {
     const savedFunMode = localStorage.getItem("funMode")
@@ -19,6 +21,18 @@ export function FunModeProvider({ children }: { children: React.ReactNode }) {
       setFunMode(true)
     }
   }, [])
+
+  useEffect(() => {
+    const pageBg = funMode
+      ? "#2563eb"
+      : theme === "dark"
+        ? "#0b2418"
+        : "#f7faf7"
+
+    document.documentElement.style.setProperty("--page-bg", pageBg)
+    document.documentElement.style.background = pageBg
+    document.body.style.background = pageBg
+  }, [funMode, theme])
 
   function toggleFunMode() {
     setFunMode((prev) => {
@@ -31,7 +45,13 @@ export function FunModeProvider({ children }: { children: React.ReactNode }) {
   return (
     <FunModeContext.Provider value={{ funMode, toggleFunMode }}>
       <div
-        className="min-h-screen transition-all duration-700 ease-in-out"
+        className={`min-h-screen transition-all duration-700 ease-in-out ${
+          funMode
+            ? "fun-mode-gradient"
+            : theme === "dark"
+              ? "bg-[#0b2418] text-white"
+              : "bg-[#f7faf7] text-[#102018]"
+        }`}
         style={{
           fontFamily: funMode
             ? '"Comic Sans MS", Papyrus, fantasy, cursive, sans-serif'
