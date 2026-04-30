@@ -2,7 +2,7 @@
 
 import { useFunMode } from "@/components/FunModeProvider"
 import { useTheme } from "@/components/ThemeProvider"
-
+import MarmosetEasterEgg from '@/components/MarmosetEasterEgg'
 import HeroSection from "@/components/HeroSection"
 import AboutSection from "@/components/AboutSection"
 import ProjectsSection from "@/components/ProjectsSection"
@@ -28,6 +28,7 @@ export default function Home() {
       <ProjectsSection />
       <ResumeSection />
       <ContactSection />
+      <MarmosetEasterEgg />
     </main>
   )
 }
