@@ -50,7 +50,7 @@ export default function HeroSection() {
             }`}
           >
             I&apos;m a Computer Science student at the University of North Texas
-            interested in software development, backend systems, IT, and creative technology.
+            interested in software development, project management, IT, and creative technology.
           </motion.p>
 
           <motion.div
