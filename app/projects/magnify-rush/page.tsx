@@ -110,7 +110,7 @@ export default function MagnifyRushPage() {
 
             <div className="mt-6 grid gap-3">
               <a
-                href={demoVideo}
+                href={demoVideoLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`rounded-xl border px-4 py-3 text-sm font-semibold transition-colors ${buttonClass}`}
@@ -151,15 +151,13 @@ export default function MagnifyRushPage() {
         <div className={`mt-12 rounded-2xl border p-6 shadow-xl ${cardClass}`}>
           <h2 className="mb-4 text-2xl font-bold">Demo Video</h2>
 
-<iframe
-  className="aspect-video w-full"
-  src={demoVideo}
-  title="Magnify Rush Final Demo"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-/>
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            className="aspect-video w-full rounded-xl"
+            src={demoVideo}
+            title="Magnify Rush Final Demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
