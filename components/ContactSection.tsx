@@ -14,8 +14,8 @@ const contactLinks = [
   },
   {
     label: 'Phone',
-    value: '(512) 516-9703',
-    href: 'tel:5125169703',
+    value: 'email for phone contact info',
+    href: 'email for phone contact info',
     icon: Phone,
   },
   {

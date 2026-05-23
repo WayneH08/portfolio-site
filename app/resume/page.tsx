@@ -18,7 +18,7 @@ import {
 } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-const pdfPath = '/Wayne_Halliburton_Resume_04_20_2026.pdf'
+const pdfPath = '/Wayne_Halliburton_Resume_05_17_2026.pdf'
 
 const skills = [
   {
@@ -300,14 +300,14 @@ export default function ResumePage() {
                 </p>
 
                 <a
-                  href="tel:5125169703"
+                  href="tel:email for phone contact info"
                   className="flex items-center gap-3 transition hover:text-emerald-400"
                 >
                   <Phone
                     size={18}
                     className={funMode || isDark ? 'text-emerald-300' : 'text-emerald-700'}
                   />
-                  512.516.9703
+                  email for phone contact info
                 </a>
 
                 <a

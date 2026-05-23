@@ -49,7 +49,7 @@ export default function HeroSection() {
                   : 'text-[#355343]'
             }`}
           >
-            I&apos;m a Computer Science student at the University of North Texas
+            Computer Science student at the University of North Texas
             interested in software development, project management, IT, and creative technology.
           </motion.p>
 
@@ -95,7 +95,7 @@ export default function HeroSection() {
             className="relative h-[420px] w-[320px] overflow-hidden rounded-2xl border border-white/10 shadow-2xl md:h-[520px] md:w-[380px]"
           >
             <Image
-              src="/headshot.jpg"
+              src="/wdh1.png"
               alt="Wayne Headshot"
               fill
               className="object-cover transition-transform duration-500 hover:scale-[1.02]"

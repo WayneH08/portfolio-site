@@ -11,19 +11,19 @@ export default function VideosPage() {
     {
       title: "Animation Project Placeholder",
       description:
-        "A future space for animation tests, motion graphics, Blender renders, or short creative experiments.",
+        "insert links to animation tests, Blender renders, and other projects",
       tag: "Animation",
     },
     {
       title: "Video Project Placeholder",
       description:
-        "A future section for edited videos, demo reels, music visuals, or behind-the-scenes project clips.",
+        "insert videos, demo reels, music visualizers, etc.",
       tag: "Video",
     },
     {
-      title: "3D / Motion Placeholder",
+      title: "3D Placeholder",
       description:
-        "A flexible area for future 3D modeling, interactive visuals, or experimental portfolio pieces.",
+        "insert 3D modeling projects, interactive visuals, character rigs etc.",
       tag: "3D",
     },
   ]
@@ -64,8 +64,8 @@ export default function VideosPage() {
                 : "text-[#355343]"
           }`}
         >
-          This page will eventually showcase video projects, animation tests,
-          3D work, motion graphics, and other creative experiments.
+          This page will eventually showcase my video projects, animations,
+          3D work, and other creative experiments.
         </p>
 
         <div className="grid gap-6 md:grid-cols-3">

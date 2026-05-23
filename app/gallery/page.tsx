@@ -64,10 +64,9 @@ export default function GalleryPage() {
             </h1>
 
             <p className={`max-w-2xl text-lg leading-8 ${paragraphClass}`}>
-              A curated collection of traditional paintings, sketches, studies,
-              and visual experiments. This gallery is built to showcase each
-              piece with room for process notes, medium details, and future
-              collections.
+              Collection of random traditional paintings, sketches, studies,
+              and visual arts projects. in this gallery i'll eventually showcase my
+              work, projects notes/comments, medium details, etc.
             </p>
           </motion.div>
 
@@ -118,9 +117,9 @@ export default function GalleryPage() {
 
               <p className={`mb-8 text-lg leading-8 ${paragraphClass}`}>
                 A lone wooden chair rests in the center of rushing water,
-                surrounded by rocks and dense forest. The piece has a dreamlike,
-                storybook quality, balancing peaceful nature with a slightly
-                mysterious object placed where it does not quite belong.
+                surrounded by rocks and dense forest. The goal was to capture a dreamlike,
+                storybook quality, balancing peaceful nature with an
+                everyday object placed where it does not quite belong.
               </p>
 
               <div className="grid gap-4 sm:grid-cols-3">
@@ -213,7 +212,7 @@ export default function GalleryPage() {
               <h3 className="mb-3 text-2xl font-bold">More Traditional Work</h3>
               <p className={`leading-7 ${paragraphClass}`}>
                 Future paintings, sketchbook pages, studies, and process shots
-                can be added here as new pieces are finished.
+                will be added here .
               </p>
             </div>
 
@@ -223,8 +222,8 @@ export default function GalleryPage() {
               </p>
               <h3 className="mb-3 text-2xl font-bold">Digital Experiments</h3>
               <p className={`leading-7 ${paragraphClass}`}>
-                This space can hold digital illustrations, animation stills,
-                visual studies, or mixed media experiments.
+                This space will hold my digital illustrations, animation frames,
+                visual studies, and mixed media stuff ;-P.
               </p>
             </div>
           </div>

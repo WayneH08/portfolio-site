@@ -33,7 +33,7 @@ export default function Navbar() {
     { label: "Projects", href: "/#projects", hash: "#projects" },
     { label: "Video/Animation", href: "/videos" },
     { label: "Gallery", href: "/gallery" },
-    { label: "Game", href: "/game" },
+    { label: "Fun & Games", href: "/game" },
     { label: "Resume", href: "/#resume", hash: "#resume" },
     { label: "Contact", href: "/#contact", hash: "#contact" },
   ]
