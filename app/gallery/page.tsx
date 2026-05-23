@@ -11,7 +11,7 @@ const artworks = [
     category: "Gouache Painting",
     year: "2023",
     medium: "Gouache on paper",
-    image: "/assets/gallery/chair-stream-painting.jpg",
+    image: "/assets/gallery/chair-stream-painting.JPG",
     description:
       "A surreal nature scene featuring a lone chair placed in a rushing stream, surrounded by rocks, trees, and layered green forest textures.",
   },
@@ -97,7 +97,7 @@ export default function GalleryPage() {
           <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="relative min-h-[420px] bg-black/10 md:min-h-[620px]">
               <Image
-                src="/assets/gallery/chair-stream-painting.jpg"
+                src="/assets/gallery/chair-stream-painting.JPG"
                 alt="Gouache painting of a wooden chair sitting in a stream surrounded by rocks and forest trees."
                 fill
                 priority
