@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider"
 import Navbar from "@/components/Navbar"
 
 export const metadata: Metadata = {
-  title: "Wayne Halliburton Portfolio",
+  title: "Wayne Halliburton's Portfolio",
   description: "Personal portfolio website",
   icons: {
     icon: "/favicon.png",
