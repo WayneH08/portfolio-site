@@ -7,7 +7,8 @@ export default function MagnifyRushPage() {
   const { funMode } = useFunMode()
   const { theme } = useTheme()
 
-  const demoVideo = "/assets/magnify-rush/Magnify%20Rush%20Final%20Demo.mp4"
+  const demoVideo = "https://www.youtube.com/embed/pI72vP0VFwI"
+  const demoVideoLink = "https://youtu.be/pI72vP0VFwI"
   const poster = "/assets/magnify-rush/design-poster.pdf"
   const flyer = "/assets/magnify-rush/handout-flyer.pdf"
   const slides = "/assets/magnify-rush/slides.pdf"
@@ -150,11 +151,13 @@ export default function MagnifyRushPage() {
         <div className={`mt-12 rounded-2xl border p-6 shadow-xl ${cardClass}`}>
           <h2 className="mb-4 text-2xl font-bold">Demo Video</h2>
 
-          <video
-            controls
-            className="w-full rounded-xl border border-white/10"
-            src={demoVideo}
-          >
+<iframe
+  className="aspect-video w-full"
+  src={demoVideo}
+  title="Magnify Rush Final Demo"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+/>
             Your browser does not support the video tag.
           </video>
         </div>
