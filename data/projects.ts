@@ -13,7 +13,7 @@ export const projects = [
     tech: ['TypeScript', 'React', 'Full Stack', 'AI'],
     href: '/projects/magnify-rush',
     assets: {
-      demo: '/assets/magnify-rush/Magnify%20Rush%20Final%20Demo.mp4',
+      demo: 'https://www.youtube.com/embed/pI72vP0VFwI',
       poster: '/assets/magnify-rush/design-poster.pdf',
       flyer: '/assets/magnify-rush/handout-flyer.pdf',
       slides: '/assets/magnify-rush/slides.pdf',
