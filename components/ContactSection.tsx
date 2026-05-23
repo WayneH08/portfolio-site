@@ -4,6 +4,7 @@ import { Mail, Phone, ExternalLink } from 'lucide-react'
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { useFunMode } from '@/components/FunModeProvider'
 import { useTheme } from '@/components/ThemeProvider'
+import { FaYoutube } from 'react-icons/fa'
 
 const contactLinks = [
   {
@@ -41,6 +42,12 @@ const contactLinks = [
     value: '@m0o053',
     href: 'https://www.instagram.com/m0o053',
     icon: FaInstagram,
+  },
+  {
+    label: 'YouTube',
+    value: '@MRMOO53',
+    href: 'https://www.youtube.com/@MRMOO53',
+    icon: FaYoutube,
   },
 ]
 
