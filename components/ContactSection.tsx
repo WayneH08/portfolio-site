@@ -14,12 +14,6 @@ const contactLinks = [
     icon: Mail,
   },
   {
-    label: 'Phone',
-    value: 'email for phone contact info',
-    href: 'email for phone contact info',
-    icon: Phone,
-  },
-  {
     label: 'GitHub',
     value: 'github.com/WayneH08',
     href: 'https://github.com/WayneH08',
