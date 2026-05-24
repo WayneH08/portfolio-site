@@ -132,6 +132,37 @@ export default function ProjectsSection() {
           )
         })}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4, delay: 0.2 }}
+        className="mt-14 flex justify-center"
+      >
+        <a
+          href="/projects"
+          className={`group relative overflow-hidden rounded-full border px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] transition-all duration-300 hover:-translate-y-1 hover:scale-105 ${
+            funMode
+              ? 'border-white/30 bg-white/10 text-white hover:bg-white/20'
+              : theme === 'dark'
+                ? 'border-emerald-700/50 bg-emerald-900/20 text-emerald-300 hover:border-emerald-400 hover:bg-emerald-800/30'
+                : 'border-emerald-300 bg-white text-emerald-800 hover:border-emerald-500 hover:bg-emerald-50'
+          }`}
+        >
+          <span className="relative z-10">More Projects →</span>
+
+          <div
+            className={`absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${
+              funMode
+                ? 'bg-white/10'
+                : theme === 'dark'
+                  ? 'bg-emerald-400/10'
+                  : 'bg-emerald-100'
+            }`}
+          />
+        </a>
+      </motion.div>
     </section>
   )
 }
