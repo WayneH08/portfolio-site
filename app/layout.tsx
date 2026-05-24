@@ -3,6 +3,7 @@ import "./globals.css"
 import { FunModeProvider } from "@/components/FunModeProvider"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import Navbar from "@/components/Navbar"
+import CRTCursor from "@/components/CRTCursor"
 
 export const metadata: Metadata = {
   title: "Wayne Halliburton's Portfolio",
@@ -67,6 +68,7 @@ export default function RootLayout({
         <ThemeProvider>
           <FunModeProvider>
             <Navbar />
+            <CRTCursor />
             {children}
           </FunModeProvider>
         </ThemeProvider>
