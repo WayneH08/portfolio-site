@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 type TrailPiece = {
   x: number
@@ -13,7 +13,28 @@ export default function CRTCursor() {
   const cursorRef = useRef<HTMLDivElement>(null)
   const trailContainerRef = useRef<HTMLDivElement>(null)
 
+  const [isMobile, setIsMobile] = useState(false)
+
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(
+        window.innerWidth <= 768 ||
+          window.matchMedia("(pointer: coarse)").matches
+      )
+    }
+
+    checkMobile()
+
+    window.addEventListener("resize", checkMobile)
+
+    return () => {
+      window.removeEventListener("resize", checkMobile)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isMobile) return
+
     const cursor = cursorRef.current
     const trailContainer = trailContainerRef.current
 
@@ -31,7 +52,6 @@ export default function CRTCursor() {
       mouseX = e.clientX
       mouseY = e.clientY
 
-      // add trail piece
       trail.push({
         x: e.clientX,
         y: e.clientY,
@@ -39,7 +59,6 @@ export default function CRTCursor() {
         id: Math.random(),
       })
 
-      // limit trail count
       if (trail.length > 12) {
         trail.shift()
       }
@@ -47,8 +66,9 @@ export default function CRTCursor() {
 
     window.addEventListener("mousemove", move)
 
+    let animationFrame: number
+
     const animate = () => {
-      // smooth cursor follow
       cursorX += (mouseX - cursorX) * 0.28
       cursorY += (mouseY - cursorY) * 0.28
 
@@ -56,7 +76,6 @@ export default function CRTCursor() {
         translate3d(${cursorX}px, ${cursorY}px, 0)
       `
 
-      // update trail
       trail.forEach((piece) => {
         piece.life -= 0.05
       })
@@ -99,15 +118,18 @@ export default function CRTCursor() {
         trailContainer.appendChild(el)
       })
 
-      requestAnimationFrame(animate)
+      animationFrame = requestAnimationFrame(animate)
     }
 
     animate()
 
     return () => {
       window.removeEventListener("mousemove", move)
+      cancelAnimationFrame(animationFrame)
     }
-  }, [])
+  }, [isMobile])
+
+  if (isMobile) return null
 
   return (
     <>
