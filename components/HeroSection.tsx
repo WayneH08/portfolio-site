@@ -95,7 +95,7 @@ export default function HeroSection() {
             className="relative h-[420px] w-[320px] overflow-hidden rounded-2xl border border-white/10 shadow-2xl md:h-[520px] md:w-[380px]"
           >
             <Image
-              src="/wdh1.png"
+              src="/IMG_2241.JPG"
               alt="Wayne Headshot"
               fill
               className="object-cover transition-transform duration-500 hover:scale-[1.02]"
