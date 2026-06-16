@@ -18,7 +18,7 @@ import {
 } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-const pdfPath = '/Wayne_Halliburton_Resume_05_17_2026.pdf'
+const pdfPath = '/Wayne_Halliburton_Resume_06_12_2026.pdf'
 
 const skills = [
   {
@@ -34,6 +34,7 @@ const skills = [
       'VS Code',
       'Google Colab',
       'Microsoft Office',
+      'Figma',
     ],
   },
   {
@@ -89,6 +90,17 @@ const experience = [
       'Managed incidents and documented reports with attention to detail and accuracy.',
       'Resolved conflicts and made decisions under pressure, improving problem-solving skills.',
       'Maintained communication with teams and followed structured protocols.',
+    ],
+  },
+    {
+    role: 'Information Technology Help Desk Technician',
+    company: 'UNT',
+    location: 'Denton, TX',
+    date: 'Aug 2023 – May 2026',
+    subtitle: 'Part-Time',
+    bullets: [
+      'Provided technical support for campus computing environments, diagnosing and resolving hardware, software, and network issues.',
+      'Maintained documentation of support tickets and collaborated with team members to streamline help desk procedures.',
     ],
   },
   {

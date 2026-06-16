@@ -83,7 +83,7 @@ export default function ResumeSection() {
             </Link>
 
             <a
-              href="/Wayne_Halliburton_Resume_05_17_2026.pdf"
+              href="/Wayne_Halliburton_Resume_06_12_2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={outlineButtonClass}
@@ -93,7 +93,7 @@ export default function ResumeSection() {
             </a>
 
             <a
-              href="/Wayne_Halliburton_Resume_05_17_2026.pdf"
+              href="/Wayne_Halliburton_Resume_06_12_2026.pdf"
               download
               className={downloadButtonClass}
             >
